@@ -1,0 +1,68 @@
+{
+    "parents": {
+        "1": "I do not know who my parents were.",
+        "2:20": "I know who my parents are or were."
+    },
+    "birthplace": {
+        "1:50": "at home",
+        "51:55":"at the home of a family friend",
+        "56:63":"at the home of a healer or midwife",
+        "64:65":"in a carriage, cart, or wagon",
+        "66:68":"in a barn, shed, or other outbuilding",
+        "69:70":"in a cave",
+        "71:72":"in a field",
+        "73:74":"in a forest",
+        "75:77":"in a temple",
+        "78":"on a battlefield",
+        "79:80":"in an alley or street",
+        "81:82":"in a brothel, tavern, or inn",
+        "83:84":"in a castle, keep, tower, or palace",
+        "85":"in a sewer or rubbish heap",
+        "86:88":"among people of a different race",
+        "89:91":"on board a boat or a ship",
+        "92:93":"in a prison or in the headquarters of a secret organization",
+        "94:95":"in a sage’s laboratory",
+        "96":"in the Feywild",
+        "97":"in the Shadowfell",
+        "98":"on the Astral Plane or the Ethereal Plane",
+        "99":"on an Inner Plane of your choice",
+        "100":"on an Outer Plane of your choice"        
+    },
+    "siblings": {
+        "1:3": 0,
+        "4:7": 3,
+        "8": 4,
+        "9": 6,
+        "10": 8
+    },
+    "siblingGender": {
+        "1": "brother",
+        "2": "sister"
+    },
+    "birthOrder": {
+        "1": "my twin.",
+        "2:11": "older than me.",
+        "12:20": "younger than me."
+    },
+    "family": {
+        "1": "I do not have any family.",
+        "2": "I was raised in an instution or asylum.",
+        "3": "I was raised in a temple by priests.",
+        "4": "I was raised in a monestery by monks.",
+        "5:8": "I was raised in an orphanage.",
+        "9:11": "I was raised by a guardian.",
+        "12:14": "I was raised by my aunt and uncle.",
+        "15:16": "I was raised by my tribe or clan.",
+        "17:25": "I was raised by my grandparents.",
+        "26:35": "I was raised by an adoptive family.",
+        "36:55": "I was raised by my father.",
+        "56:75": "I was raised by my mother.",
+        "76:100": "I was raised by my mother and father."
+    },
+    "absentParent": {
+        "1:4": "is dead.",
+        "5:6": "was imprisoned, enslaved, or taken away.",
+        "7": "abandoned me.",
+        "8:10": "disappeared to an unknown fate."
+    }
+}
