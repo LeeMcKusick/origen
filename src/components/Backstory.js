@@ -1,4 +1,9 @@
 import React from 'react';
+
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+
 import originOptions from '../data/originOptions.json';
 
 
@@ -49,8 +54,6 @@ class Backstory extends React.Component {
                     } else if (roll < 76) {
                         fam = fam + " My father " + this.getResult("absentParent", this.roll(10)) 
                     }
-
-
                 }
                 this.setState({
                     family: fam
@@ -88,7 +91,6 @@ class Backstory extends React.Component {
     }
 
     getSiblings = (roll) => {
-
         let numSibs = this.roll( this.getResult("siblings", roll)) + (Math.floor(roll/3));
         console.log("numSibs: " + numSibs)
         let siblings = [];
@@ -101,7 +103,6 @@ class Backstory extends React.Component {
             });
         }
         return siblings;
-
     } 
 
     render() {
@@ -109,25 +110,44 @@ class Backstory extends React.Component {
             <li key={sib.num}>A {sib.gender}, who is {sib.order}</li>
         );
 
+
+        /* Replace sibout with a separate component */
         return (
 
-            <div>
+        <Container>
+            
+            <Row>
                 <h4>My Birth</h4>
-                
+            </Row>
+            <Row>
                 <p>I was born {this.state.birthplace}.</p>
-
+            </Row>
+            <Row>
                 <h4>My Family</h4>
+            </Row>
+            <Row>
                 <p>{this.state.parents}</p>
+            </Row>
+            <Row>
                 <p>{this.state.family}</p>
+            </Row>
+            <Row>
                 <p>I have {this.state.siblings.length ? this.state.siblings.length : 'no'} {this.state.siblings.length === 1 ? 'sibling' : 'siblings'}</p>
+            </Row>
+            <Row>
                 <div><ul>{sibOut}</ul></div>
+            </Row>
+                
+                
+               <Row>
                 <div>
-                    <button onClick={() => this.genState("birthplace")}>Reroll Birthplace</button>
-                    <button onClick={() => this.genState("parents")}>Reroll Parents</button>
-                    <button onClick={() => this.genState("siblings")}>Reroll Siblings</button>
-                    <button onClick={() => this.genState("family")}>Reroll Family</button>
+                    <Button onClick={() => this.genState("birthplace")}>Reroll Birthplace</Button>
+                    <Button onClick={() => this.genState("parents")}>Reroll Parents</Button>
+                    <Button onClick={() => this.genState("siblings")}>Reroll Siblings</Button>
+                    <Button onClick={() => this.genState("family")}>Reroll Family</Button>
                 </div>
-            </div>
+                </Row>
+        </Container>
         );
     }
 }
