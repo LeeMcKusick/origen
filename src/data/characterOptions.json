@@ -1,0 +1,94 @@
+{
+    "race": [
+        {"name": "human", "label": "Human"},
+        {"name": "aarakocra", "label": "Aarakocra"},
+        {"name": "aasimar", "label": "Aasimar"},
+        {"name": "dragonborn", "label": "Dragonborn"},
+        {"name": "dwarf", "label": "Dwarf",
+            "subraces": [
+                {"name": "hill", "label": "Hill"},
+                {"name": "mountain", "label": "Mountain"}
+            ]
+        },
+        {"name": "elf", "label": "Elf",
+            "subraces": [
+                {"name": "dark", "label": "Drow"},
+                {"name": "eladrin", "label": "Eladrin"},
+                {"name": "high", "label": "High"},
+                {"name": "wood", "label": "Wood"}
+            ]},
+        {"name": "genasi", "label": "Genasi",
+            "subraces": [
+                {"name": "air", "label": "Air"},
+                {"name": "earth", "label": "Earth"},
+                {"name": "fire", "label": "Fire"},
+                {"name": "water", "label": "Water"}
+            ]},
+        {"name": "gnome", "label": "Gnome",
+            "subraces": [
+                {"name": "deep", "label": "Deep"},
+                {"name": "forest", "label": "Forest"},
+                {"name": "rock", "label": "Rock"}
+            ]},
+        {"name": "half-elf", "label": "Half-elf"},
+        {"name": "half-orc", "label": "Half-orc"},
+        {"name": "halfling", "label": "Halfling",
+            "subraces": [
+                {"name": "lightfoot", "label": "Lightfoot"},
+                {"name": "stout", "label": "Stout"}
+            ]},
+        {"name": "tiefling", "label": "Tiefling"}
+    ],
+    "class": [
+        {"name": "barbarian", "label": "Barbarian"},
+        {"name": "bard", "label": "Bard"},
+        {"name": "cleric", "label": "Cleric"},
+        {"name": "druid", "label": "Druid"},
+        {"name": "fighter", "label": "Fighter"},
+        {"name": "monk", "label": "Monk"},
+        {"name": "paladin", "label": "Paladin"},
+        {"name": "ranger", "label": "Ranger"},
+        {"name": "rogue", "label": "Rogue"},
+        {"name": "sorcerer", "label": "Sorcerer"},
+        {"name": "warlock", "label": "Warlock"},
+        {"name": "wizard", "label": "Wizard"}
+    ],
+    "background": [
+        {"name": "acolyte", "label": "Acolyte"},
+        {"name": "charlatan", "label": "Charlatan"},
+        {"name": "criminal", "label": "Criminal/Spy"},
+        {"name": "entertainer", "label": "Entertainer"},
+        {"name": "folkhero", "label": "Folk Hero"},
+        {"name": "gladiator", "label": "Gladiator"},
+        {"name": "guildartisan", "label": "Guild Artisan/Guild Merchant"},
+        {"name": "hauntedone", "label": "Haunted One"},
+        {"name": "knight", "label": "Knight"},
+        {"name": "noble", "label": "Noble"},
+        {"name": "outlander", "label": "Outlander"},
+        {"name": "pirate", "label": "Pirate"},
+        {"name": "sage", "label": "Sage"},
+        {"name": "sailor", "label": "Sailor"},
+        {"name": "soldier", "label": "Soldier"},
+        {"name": "urchin", "label": "Urchin"}
+    ],
+    "charisma": [
+        {"name": "6", "label": "6", "modifier": -2},
+        {"name": "7", "label": "7", "modifier": -2},
+        {"name": "8", "label": "8", "modifier": -1},
+        {"name": "9", "label": "9", "modifier": -1},
+        {"name": "10", "label": "10", "modifier": 0},
+        {"name": "11", "label": "11", "modifier": 0},
+        {"name": "12", "label": "12", "modifier": 1},
+        {"name": "13", "label": "13", "modifier": 1},
+        {"name": "14", "label": "14", "modifier": 2},
+        {"name": "15", "label": "15", "modifier": 2},
+        {"name": "16", "label": "16", "modifier": 3},
+        {"name": "17", "label": "17", "modifier": 3},
+        {"name": "18", "label": "18", "modifier": 4},
+        {"name": "19", "label": "19", "modifier": 4},
+        {"name": "20", "label": "20", "modifier": 5}
+    ],
+    "age": {
+        
+    }
+}
