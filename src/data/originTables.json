@@ -331,12 +331,12 @@
         "6":	"I was a prodigy who demonstrated mastery of the arcane arts at an early age. When I became old enough to set out on my own, I did so to learn more magic and expand my power."
     },
     "numLifeEvents": {
-        "1:20":  1,
+        "1:20":   1,
         "21:30":  4,
         "31:40":  6,
         "41:50":  8,
         "51:60":  10,
-        "61:100":  12
+        "61:100": 12
     },
     "lifeEvents": {
         "1:10":   {"name": "tragedy", "label": "I suffered a tragedy.", "table": "tragedies", "die": 12 },
@@ -388,7 +388,7 @@
         "7": "I once performed a service for a local temple. (The next time you visit the temple, you can receive healing up to your hit point maximum.)",
         "8": "A friendly alchemist gifted me with a potion of healing or a flask of acid. (Your choice.)",
         "9": "I found a treasure map.",
-        "10": "A distant relative left me a stipend that enables me to live at the comfortable lifestyle (For 1d20 years. If you choose to live at a higher lifestyle, you reduce the price of the lifestyle by 2 gp during that time period.)"
+        "10": "A distant relative left me a stipend that enables me to live at a comfortable lifestyle for several years. (Roll 1d20 for the number of years. If you choose to live at a higher lifestyle, you reduce the price of the lifestyle by 2 gp during that time period.)"
     },
     "crime": {
         "1": "murder",
@@ -417,12 +417,20 @@
       "41:50":	"I escaped certain death and believe it was the intervention of a god that saved me.",
       "51:60":	"I witnessed a minor miracle.",
       "61:70":	"I explored an empty house and found it to be haunted.",
-      "71:75":	"I was briefly possessed. Roll a d6 to determine what type of creature possessed you: 1, celestial; 2, devil; 3, demon; 4, fey; 5, elemental; 6, undead.",
+      "71:75":	"I was briefly possessed by ",
       "76:80":	"I saw a ghost.",
       "81:85":	"I saw a ghoul feeding on a corpse.",
       "86:90":  "A celestial or a fiend visited me in my dreams to give a warning of dangers to come.",
       "91:95":	"I briefly visited the Feywild or the Shadowfell.",
       "96:00":	"I saw a portal that I believe leads to another plane of existence."
+    },
+    "possession": {
+        "1": "a celestial.",
+        "2": "a devil.",
+        "3": "a demon.",
+        "4": "a fey.",
+        "5": "an elemental.",
+        "6": "an undead."
     },
     "tragedies": {
       "1:2":  "A family member or a close friend died. Roll on the Cause of Death supplemental table to find out how.",

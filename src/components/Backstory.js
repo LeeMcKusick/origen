@@ -131,29 +131,34 @@ class Backstory extends React.Component {
 
         this.genState("background");
         this.genState("class");
-
     }
 
     generateLifeEvents = () => {
-        let lifeAge = this.getResult("numLifeEvents", this.props.age);
+        console.log(this.props.age);
+        let lifeAge = this.getResult("numLifeEvents", Number(this.props.age));
+        console.log(lifeAge);
         let numLifeEvents = this.roll(lifeAge);
 
         let lifeEvents = [];
+        
         for (let i=0; i < numLifeEvents; i++) {
             let event = this.getResult('lifeEvents', this.roll(100));
+            console.log(event);
             let eventText = "";
-            if (event.name === "crime") {
-                
-                eventText = "I was accused of " + this.getResult(event.table, this.roll(event.die)) + ". ";
-                eventText += this.getResult("punishment", this.roll(12));;
             
+            if (event.name === "crime") {
+                eventText += "I was accused of " + this.getResult(event.table, this.roll(event.die)) + ". ";
+                eventText += this.getResult("punishment", this.roll(12));;
+            } else if (event.name === "supernatural") {
+                let snRoll = this.roll(event.die);
+                eventText += event.label + " " + this.getResult(event.table, snRoll);
+                if (snRoll > 70 && snRoll < 76) {
+                    eventText += this.getResult("possession", this.roll(6));
+                }
             } else if (event.table) {
-                
-                eventText = this.getResult(event.table, this.roll(event.die));
-
-                
+                eventText += this.getResult(event.table, this.roll(event.die));
             } else {
-                eventText = event.label;
+                eventText += event.label;
             }
             lifeEvents.push(eventText);
         }
@@ -285,7 +290,7 @@ class Backstory extends React.Component {
 
         
         let lifeEvents = this.state.lifeEvents.map((lifeEvent) => 
-            <Row>{lifeEvent}</Row>
+            <Row className="lifeEvent">{lifeEvent}</Row>
         );
         
 
@@ -330,7 +335,7 @@ class Backstory extends React.Component {
                 <p>I became a {this.props.class} because {this.state.classReason}</p>
             </Row>
             <Row>
-                <h4>Life Events</h4>
+                <h4>Life Events {this.props.age}</h4>
             </Row>
             {lifeEvents}
         </Container>
