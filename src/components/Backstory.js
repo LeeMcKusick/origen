@@ -335,7 +335,7 @@ class Backstory extends React.Component {
                 <p>I became a {this.props.class} because {this.state.classReason}</p>
             </Row>
             <Row>
-                <h4>Life Events {this.props.age}</h4>
+                <h4>Life Events</h4>
             </Row>
             {lifeEvents}
         </Container>
