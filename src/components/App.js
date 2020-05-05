@@ -15,7 +15,7 @@ class App extends React.Component {
       background: { name: "acolyte", label: "Acolyte"},
       subrace: {name: '', label: ''},
       charisma: {"name": "10", "label": "10", "modifier": 0},
-      age: 80
+      age: 20
     };
   }
 
@@ -30,6 +30,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <h1>Origen</h1>
+          <h5>a D&amp;D backstory generator</h5>
           <div class="donate">
             <p>Like this app?</p>
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">

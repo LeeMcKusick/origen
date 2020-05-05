@@ -46,3 +46,19 @@
     transform: rotate(360deg);
   }
 }
+
+.siblings::after {
+  content: ":";
+}
+.sib::before { 
+  content: ", ";
+}
+.sib:last-child::before.sib:not(:first-child) {
+  content: ", and ";
+}
+
+span.sib:first-of-type::before {
+  content: "" !important ;
+}
+
+

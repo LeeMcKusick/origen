@@ -351,7 +351,7 @@
         "86:90":  {"name": "war", "label": "I fought in a battle.", "table": "war", "die": 12},
         "91:95":  {"name": "crime", "label": "I committed a crime or was wrongly accused of doing so.", "table": "crime", "die": 8},
         "96:99":  {"name": "arcane", "label": "I encountered something magical.", "table": "arcaneMatters", "die": 10},
-        "100":    {"name": "weird", "label": "Something truly strange happened to me.", "table": "weirdstuff", "die": 12}
+        "100":    {"name": "weird", "label": "Something truly strange happened to me.", "table": "weirdStuff", "die": 12}
     },
     "adventure": {
         "1:10": "I nearly died. I have nasty scars on your body, and I am missing an ear, 1d3 fingers, or 1d4 toes.",
@@ -382,9 +382,9 @@
         "1": "A friendly wizard gave me a spell scroll containing one cantrip (of the DM’s choice).",
         "2": "I saved the life of a commoner, who now owes me a life debt. (This individual accompanies you on your travels and performs mundane tasks for you, but will leave if neglected, abused, or imperiled. Determine details about this character by working with your DM.)",
         "3": "I found a riding horse.",
-        "4": "I found some money. (I have 1d20 gp in addition to your regular starting funds.)",
+        "4": "I found some money. (Start with 1d20 gp in addition to your regular starting funds.)",
         "5": "A relative bequeathed me a simple weapon of my choice.",
-        "6": "I found something interesting. (I gain one additional trinket.)",
+        "6": "I found something interesting. (Gain one additional trinket.)",
         "7": "I once performed a service for a local temple. (The next time you visit the temple, you can receive healing up to your hit point maximum.)",
         "8": "A friendly alchemist gifted me with a potion of healing or a flask of acid. (Your choice.)",
         "9": "I found a treasure map.",

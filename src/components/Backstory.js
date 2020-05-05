@@ -21,7 +21,7 @@ class Backstory extends React.Component {
             childhoodMemories: "",
             backgroundReason: "",
             classReason: "",
-            age: 80,
+            age: 20,
             lifeEvents: []
         };
     }
@@ -273,7 +273,7 @@ class Backstory extends React.Component {
 
     render() {
         let sibOut = this.state.siblings.map((sib) =>
-            <li key={sib.num}>{sib.order} {sib.gender}</li>
+                <span class="sib" key={sib.num}> {sib.order} {sib.gender}</span>
         );
 
         
@@ -308,13 +308,10 @@ class Backstory extends React.Component {
                 <p>{this.state.parents}</p>
             </Row>
             <Row>
-                <p>I have {this.state.siblings.length ? this.state.siblings.length : 'no'} {this.state.siblings.length === 1 ? 'sibling' : 'siblings'}</p>
+                <p><span class="siblings">I have {this.state.siblings.length ? this.state.siblings.length : 'no'} {this.state.siblings.length === 1 ? 'sibling' : 'siblings'}</span>{sibOut}.</p>
             </Row>
             <Row>
-                <div><ul>{sibOut}</ul></div>
-            </Row>
-            <Row>
-                <h4>My Childhood</h4>
+                <h4>My Childhood and Life Choices</h4>
             </Row>
 
             <Row>

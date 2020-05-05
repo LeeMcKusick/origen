@@ -15,7 +15,7 @@ class CharForm extends React.Component {
             background: this.props.background,
             subrace: this.props.subrace,
             charisma: 10,
-            age: 80
+            age: 20
         };
     }    
     
