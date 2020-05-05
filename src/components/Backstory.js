@@ -39,6 +39,12 @@ class Backstory extends React.Component {
         this.genState("siblings");
     }
 
+    rerollAll = () => {
+        this.generateFamily();
+        this.generateChildhood();
+        this.generateLifeEvents();
+    }
+
     generateFamily() {
         let familyRoll = this.getResult("raised", this.roll(100));
         let motherStatus = '';
@@ -98,6 +104,7 @@ class Backstory extends React.Component {
     }
 
     generateChildhood = () => {
+        this.genState("birthplace");
         let lifestyleRoll = this.getResult("familyLifestyle", this.roll(6) + this.roll(6) + this.roll(6) )
         let childhoodHomeRoll = this.roll(100) + lifestyleRoll.modifier;
         
@@ -289,18 +296,12 @@ class Backstory extends React.Component {
         <Container>
             <hr/>
             <Row>
-                <Col><Button onClick={() => this.genState("birthplace")}>Reroll Birthplace</Button></Col>
                 <Col><Button onClick={() => this.generateFamily()}>Reroll Family</Button></Col>
                 <Col><Button onClick={() => this.generateChildhood()}>Reroll Childhood</Button></Col>
                 <Col><Button onClick={() => this.generateLifeEvents()}>Reroll Life Events</Button></Col>
+                <Col><Button onClick={() => this.rerollAll()}>Reroll All</Button></Col>
             </Row>
             <hr/>
-            <Row>
-                <h4>My Birth </h4>
-            </Row>
-            <Row>
-                <p>I was born {this.state.birthplace}.</p>
-            </Row>
             <Row>
                 <h4>My Family</h4>
             </Row>
@@ -308,12 +309,14 @@ class Backstory extends React.Component {
                 <p>{this.state.parents}</p>
             </Row>
             <Row>
-                <p><span class="siblings">I have {this.state.siblings.length ? this.state.siblings.length : 'no'} {this.state.siblings.length === 1 ? 'sibling' : 'siblings'}</span>{sibOut}.</p>
+                <p><span class="siblings">I have {this.state.siblings.length ? this.state.siblings.length : 'no'} {this.state.siblings.length === 1 ? 'sibling' : 'siblings'}</span><span>{sibOut}</span>.</p>
             </Row>
             <Row>
                 <h4>My Childhood and Life Choices</h4>
             </Row>
-
+            <Row>
+                <p>I was born {this.state.birthplace}.</p>
+            </Row>
             <Row>
                 <p>I grew up {this.state.childhoodHome}, in {this.state.lifestyle} conditions.</p>
             </Row>

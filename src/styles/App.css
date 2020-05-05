@@ -53,12 +53,11 @@
 .sib::before { 
   content: ", ";
 }
-.sib:last-child::before.sib:not(:first-child) {
-  content: ", and ";
+.sib:first-of-type::before{
+  content: "" !important;
 }
-
-span.sib:first-of-type::before {
-  content: "" !important ;
+.sib:last-of-type.sib:not(:first-of-type)::before {
+  content: ", and ";
 }
 
 

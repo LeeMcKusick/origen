@@ -47,6 +47,7 @@ class App extends React.Component {
           class={this.state.class}
           background={this.state.background}
           subrace={this.state.subrace}
+          charisma={this.state.charisma}
           age={this.state.age}
           callback={this.charFormCallback}></CharacterForm>
           

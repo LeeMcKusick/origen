@@ -102,7 +102,7 @@ class CharForm extends React.Component {
                          <Form.Label id="charisma">
                              Charisma
                          </Form.Label>
-                         <Form.Control as="select" name="charisma" onChange={this.handleInputChange}>
+                         <Form.Control as="select" name="charisma" defaultValue={this.props.charisma.name} onChange={this.handleInputChange}>
                             {this.getCharOptions("charisma")}
                         </Form.Control>
                     </Col>

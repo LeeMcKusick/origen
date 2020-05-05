@@ -61,8 +61,6 @@
         {"name": "folkhero", "label": "Folk Hero"},
         {"name": "gladiator", "label": "Gladiator"},
         {"name": "guildartisan", "label": "Guild Artisan/Guild Merchant"},
-        {"name": "hauntedone", "label": "Haunted One"},
-        {"name": "knight", "label": "Knight"},
         {"name": "noble", "label": "Noble"},
         {"name": "outlander", "label": "Outlander"},
         {"name": "pirate", "label": "Pirate"},
