@@ -18,7 +18,11 @@ class Backstory extends React.Component {
             siblings: [],
             childhoodHome: "",
             lifestyle: "",
-            childhoodMemories: ""
+            childhoodMemories: "",
+            backgroundReason: "",
+            classReason: "",
+            age: 80,
+            lifeEvents: []
         };
     }
 
@@ -28,6 +32,7 @@ class Backstory extends React.Component {
 
         this.generateFamily();
         this.generateChildhood();
+        this.generateLifeEvents();
 
 
         //this.genState("parents");
@@ -117,7 +122,41 @@ class Backstory extends React.Component {
             childhoodMemories: memories
         });
 
+        this.genState("background");
+        this.genState("class");
+
     }
+
+    generateLifeEvents = () => {
+        let lifeAge = this.getResult("numLifeEvents", this.props.age);
+        let numLifeEvents = this.roll(lifeAge);
+
+        let lifeEvents = [];
+        for (let i=0; i < numLifeEvents; i++) {
+            let event = this.getResult('lifeEvents', this.roll(100));
+            let eventText = "";
+            if (event.name === "crime") {
+                
+                eventText = "I was accused of " + this.getResult(event.table, this.roll(event.die)) + ". ";
+                eventText += this.getResult("punishment", this.roll(12));;
+            
+            } else if (event.table) {
+                
+                eventText = this.getResult(event.table, this.roll(event.die));
+
+                
+            } else {
+                eventText = event.label;
+            }
+            lifeEvents.push(eventText);
+        }
+        this.setState({
+            lifeEvents: lifeEvents
+        })
+
+    }
+
+
 
     genState = (field) => {
         switch(field) {
@@ -167,6 +206,16 @@ class Backstory extends React.Component {
                     family: fam
                 });
 
+                break;
+            case "background":
+                this.setState({
+                    backgroundReason: this.getResult(this.props.background, this.roll(6) )
+                });
+                break;
+            case "class":
+                this.setState({
+                    classReason: this.getResult(this.props.class, this.roll(6) )
+                });
                 break;
             default: 
                 return false;
@@ -224,8 +273,14 @@ class Backstory extends React.Component {
 
     render() {
         let sibOut = this.state.siblings.map((sib) =>
-            <li key={sib.num}>A {sib.gender}, who is {sib.order}</li>
+            <li key={sib.num}>{sib.order} {sib.gender}</li>
         );
+
+        
+        let lifeEvents = this.state.lifeEvents.map((lifeEvent) => 
+            <Row>{lifeEvent}</Row>
+        );
+        
 
 
         /* Replace sibout with a separate component */
@@ -237,6 +292,7 @@ class Backstory extends React.Component {
                 <Col><Button onClick={() => this.genState("birthplace")}>Reroll Birthplace</Button></Col>
                 <Col><Button onClick={() => this.generateFamily()}>Reroll Family</Button></Col>
                 <Col><Button onClick={() => this.generateChildhood()}>Reroll Childhood</Button></Col>
+                <Col><Button onClick={() => this.generateLifeEvents()}>Reroll Life Events</Button></Col>
             </Row>
             <hr/>
             <Row>
@@ -264,13 +320,19 @@ class Backstory extends React.Component {
             <Row>
                 <p>I grew up {this.state.childhoodHome}, in {this.state.lifestyle} conditions.</p>
             </Row>
-
-            <Row>
-                <p>{this.state.childhood}</p>
-            </Row>
             <Row>
                 <p>{this.state.childhoodMemories}</p>
             </Row>
+            <Row>
+                <p>I became a {this.props.background} because {this.state.backgroundReason}</p>
+            </Row>
+            <Row>
+                <p>I became a {this.props.class} because {this.state.classReason}</p>
+            </Row>
+            <Row>
+                <h4>Life Events</h4>
+            </Row>
+            {lifeEvents}
         </Container>
         );
     }

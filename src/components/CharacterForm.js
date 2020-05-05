@@ -14,7 +14,8 @@ class CharForm extends React.Component {
             class: this.props.class,
             background: this.props.background,
             subrace: this.props.subrace,
-            charisma: 10
+            charisma: 10,
+            age: 80
         };
     }    
     
@@ -38,6 +39,16 @@ class CharForm extends React.Component {
             subrace: option
         });
     };
+
+    handleAge = (event) => {
+        const age = event.currentTarget.value;
+        if (age < 0) { age = 0 }
+        if (age > 100) { age = 100 }
+        this.setState({
+            age: age
+        });
+        this.props.callback("age", age);
+    }
 
     getCharOptions = (option) => {
         return charOptions[option].map((i) => 
@@ -94,6 +105,12 @@ class CharForm extends React.Component {
                          <Form.Control as="select" name="charisma" onChange={this.handleInputChange}>
                             {this.getCharOptions("charisma")}
                         </Form.Control>
+                    </Col>
+                    <Col>
+                         <Form.Label id="age">
+                             Age
+                         </Form.Label>
+                         <Form.Control type="number" name="age" placeholder="20" onChange={this.handleAge} />
                     </Col>
                 </Form.Row>
             </Form>

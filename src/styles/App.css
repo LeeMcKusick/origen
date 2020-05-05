@@ -13,6 +13,15 @@
   }
 }
 
+.donate {
+  position: absolute;
+  right: 10px;
+}
+
+.donate p {
+  font-size: 0.5em;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 10vh;

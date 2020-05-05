@@ -40,9 +40,9 @@
         "2": "sister"
     },
     "birthOrder": {
-        "1": "my twin.",
-        "2:11": "older than me.",
-        "12:20": "younger than me."
+        "1": "a twin",
+        "2:11": "an older",
+        "12:20": "a younger"
     },
     "raised": {
         "1": { "label": "on the streets.", "absentMother": true, "absentFather": true },
@@ -129,5 +129,335 @@
         "13:15":"I had several friends, and my childhood was generally a happy one.",
         "16:17":"I always found it easy to make friends, and I loved being around people.",
         "18":	"Everyone knew who I was, and I had friends everywhere I went."
+    },
+    "acolyte": {
+        "1": "I ran away from home at an early age and found refuge in a temple.",
+        "2": "my family gave me to a temple, since they were unable or unwilling to care for me.",
+        "3": "I grew up in a household with strong religious convictions. Entering the service of one or more gods seemed natural.",
+        "4": "an impassioned sermon struck a chord deep in my soul and moved me to serve the faith.",
+        "5": "I followed a childhood friend, a respected acquaintance, or someone I loved into religious service.",
+        "6": "after encountering a true servant of the gods, I was so inspired that I immediately entered the service of a religious group."
+    },
+    "charlatan": {
+        "1": "I was left to my own devices, and my knack for manipulating others helped me survive.",
+        "2": "I learned early on that people are gullible and easy to exploit.",
+        "3": "I often got in trouble, but I managed to talk my way out of it every time.",
+        "4": "I took up with a confidence artist, from whom I learned my craft.",
+        "5": "after a charlatan fleeced my family, I decided to learn the trade so I would never be fooled by such deception again.",
+        "6": "I was poor or I feared becoming poor, so I learned the tricks I needed to keep myself out of poverty."
+    },
+    "criminal": {
+        "1":	"I resented authority in my younger days and saw a life of crime as the best way to fight against tyranny and oppression.",
+        "2":	"necessity forced me to take up the life, since it was the only way I could survive.",
+        "3":	"I fell in with a gang of reprobates and ne’er-do-wells, and I learned my specialty from them.",
+        "4":	"a parent or relative taught me my criminal specialty to prepare me for the family business.",
+        "5":	"I left home and found a place in a thieves’ guild or some other criminal organization.",
+        "6":	"I was always bored, so I turned to crime to pass the time and discovered I was quite good at it."
+      },
+    "entertainer": {
+        "1":	"members of my family made ends meet by performing, so it was fitting for me to follow their example.",
+        "2":	"I always had a keen insight into other people, enough so that I could make them laugh or cry with my stories or songs.",
+        "3":	"I ran away from home to follow a minstrel troupe.",
+        "4":	"I saw a bard perform once, and I knew from that moment on what I was born to do.",
+        "5":	"I earned coin by performing on street corners and eventually made a name for myself.",
+        "6":	"A traveling entertainer took me in and taught me the trade."
+      }, 
+    "folkhero": {
+        "1":	"I learned what was right and wrong from my family.",
+        "2":	"I was always enamored by tales of heroes and wished I could be something more than ordinary.",
+        "3":	"I hated my mundane life, so when it was time for someone to step up and do the right thing, I took my chance.",
+        "4":	"A parent or one of my relatives was an adventurer, and I was inspired by that person’s courage.",
+        "5":	"A mad old hermit spoke a prophecy when I was born, saying that I would accomplish great things.",
+        "6":	"I have always stood up for those who are weaker than I am."
+      },
+    "guildartisan": {
+        "1":	"I was apprenticed to a master who taught me the guild’s business.",
+        "2":	"I helped a guild artisan keep a secret or complete a task, and in return I was taken on as an apprentice.",
+        "3":	"one of my family members who belonged to the guild made a place for me.",
+        "4":	"I was always good with my hands, so I took the opportunity to learn a trade.",
+        "5":	"I wanted to get away from my home situation and start a new life.",
+        "6":	"I learned the essentials of my craft from a mentor but had to join the guild to finish my training."
+      },
+    "hermit": {
+        "1":	"my enemies ruined my reputation, and I fled to the wilds to avoid further disparagement.",
+        "2":	"I am comfortable with being isolated, as I seek inner peace.",
+        "3":	"I never liked the people I called my friends, so it was easy for me to strike out on my own.",
+        "4":	"I felt compelled to forsake my past, but did so with great reluctance, and sometimes I regret making that decision.",
+        "5":	"I lost everything — my home, my family, my friends. Going it alone was all I could do.",
+        "6":	"society’s decadence disgusted me, so I decided to leave it behind."
+    },
+    "noble": {
+        "1":	"I come from an old and storied family, and it fell to me to preserve the family name.",
+        "2":	"my family has been disgraced, and I intend to clear our name.",
+        "3":	"my family recently came by its title, and that elevation thrust us into a new and strange world.",
+        "4":	"my family has a title, but none of my ancestors have distinguished themselves since we gained it.",
+        "5":	"my family is filled with remarkable people. I hope to live up to their example.",
+        "6":	"I hope to increase my family’s power and influence."
+      },
+    "outlander": {
+        "1":	"I spent a lot of time in the wilderness as a youngster, and I came to love that way of life.",
+        "2":	"from a young age, I couldn’t abide the stink of the cities and preferred to spend my time in nature.",
+        "3":	"I came to understand the darkness that lurks in the wilds, and I vowed to combat it.",
+        "4":	"my people lived on the edges of civilization, and I learned the methods of survival from my family.",
+        "5":	"after a tragedy I retreated to the wilderness, leaving my old life behind.",
+        "6":	"my family moved away from civilization, and I learned to adapt to my new environment."
+    },
+    "sage": {
+        "1":	"I was naturally curious, so I packed up and went to a university to learn more about the world.",
+        "2":	"my mentor’s teachings opened my mind to new possibilities in that field of study.",
+        "3":	"I was always an avid reader, and I learned much about my favorite topic on my own.",
+        "4":	"I discovered an old library and pored over the texts I found there. That experience awakened a hunger for more knowledge.",
+        "5":	"I impressed a wizard who told me I was squandering my talents and should seek out an education to take advantage of my gifts.",
+        "6":	"one of my parents or a relative gave me a basic education that whetted my appetite, and I left home to build on what I had learned."
+    },
+    "sailor": {
+        "1":	"I was press-ganged by pirates and forced to serve on their ship until I finally escaped.",
+        "2":	"I wanted to see the world, so I signed on as a deckhand for a merchant ship.",
+        "3":	"one of my relatives was a sailor who took me to sea.",
+        "4":	"I needed to escape my community quickly, so I stowed away on a ship. When the crew found me, I was forced to work for my passage.",
+        "5":	"reavers attacked my community, so I found refuge on a ship until I could seek vengeance.",
+        "6":	"I had few prospects where I was living, so I left to find my fortune elsewhere."
+    },
+    "soldier": {
+        "1":	"I joined the militia to help protect my community from monsters.",
+        "2":	"a relative of mine was a soldier, and I wanted to carry on the family tradition.",
+        "3":	"the local lord forced me to enlist in the army.",
+        "4":	"war ravaged my homeland while I was growing up. Fighting was the only life I ever knew.",
+        "5":	"I wanted fame and fortune, so I joined a mercenary company, selling my sword to the highest bidder.",
+        "6":	"invaders attacked my homeland. It was my duty to take up arms in defense of my people."
+    }, 
+    "urchin": {
+        "1":	"wanderlust caused me to leave my family to see the world. I look after myself.",
+        "2":	"I ran away from a bad situation at home and made my own way in the world.",
+        "3":	"monsters wiped out my village, and I was the sole survivor. I had to find a way to survive.",
+        "4":	"a notorious thief looked after me and other orphans, and we spied and stole to earn our keep.",
+        "5":	"one day I woke up on the streets, alone and hungry, with no memory of my early childhood.",
+        "6":	"my parents died, leaving no one to look after me. I raised myself.ricks I needed to keep myself out of poverty."
+    },
+    "barbarian": {
+        "1":	"my devotion to my people lifted me in battle, making me powerful and dangerous.",
+        "2":	"the spirits of my ancestors called on me to carry out a great task.",
+        "3":	"I lost control in battle one day, and it was as if something else was manipulating my body, forcing it to kill every foe I could reach.",
+        "4":	"I went on a spiritual journey to find myself and instead found a spirit animal to guide, protect, and inspire me.",
+        "5":	"I was struck by lightning and lived. Afterward, I found a new strength within me that let me push beyond my limitations.",
+        "6":	"my anger needed to be channeled into battle, or I risked becoming an indiscriminate killer."
+    },
+    "bard": {
+        "1":	"I awakened my latent bardic abilities through trial and error.",
+        "2":	"I was a gifted performer and attracted the attention of a master bard who schooled me in the old techniques.",
+        "3":	"I joined a loose society of scholars and orators to learn new techniques of performance and magic.",
+        "4":	"I felt a calling to recount the deeds of champions and heroes, to bring them alive in song and story.",
+        "5":	"I joined one of the great colleges to learn old lore, the secrets of magic, and the art of performance.",
+        "6":	"I picked up a musical instrument one day and instantly discovered that I could play it."
+    },
+    "cleric":{
+        "1":	"A supernatural being in service to the gods called me to become a divine agent in the world.",
+        "2":	"I saw the injustice and horror in the world and felt moved to take a stand against them.",
+        "3":	"my god gave me an unmistakable sign. I dropped everything to serve the divine.",
+        "4":	"although I was always devout, it wasn’t until I completed a pilgrimage that I knew my true calling.",
+        "5":	"I used to serve in my religion’s bureaucracy but found I needed to work in the world, to bring the message of my faith to the darkest corners of the land.",
+        "6":	"I realize that my god works through me, and I do as commanded, even though I don’t know why I was chosen to serve."
+    },
+    "druid":{
+        "1":	"I saw too much devastation in the wild places, too much of nature’s splendor ruined by the despoilers. I joined a circle of druids to fight back against the enemies of nature.",
+        "2":	"I found a place among a group of druids after I fled a catastrophe.",
+        "3":	"I have always had an affinity for animals, so I explored my talent to see how I could best use it.",
+        "4":	"I befriended a druid and was moved by druidic teachings. I decided to follow my friend’s guidance and give something back to the world.",
+        "5":	"while I was growing up, I saw spirits all around me — entities no one else could perceive. I sought out the druids to help me understand the visions and communicate with these beings.",
+        "6":	"I have always felt disgust for creatures of unnatural origin. For this reason, I immersed myself in the study of the druidic mysteries and became a champion of the natural order."
+    },
+    "fighter": {
+        "1":	"I wanted to hone my combat skills, and so I joined a war college.",
+        "2":	"I squired for a knight who taught me how to fight, care for a steed, and conduct myself with honor. I decided to take up that path for myself.",
+        "3":	"horrible monsters descended on my community, killing someone I loved. I took up arms to destroy those creatures and others of a similar nature.",
+        "4":	"I joined the army and learned how to fight as part of a group.",
+        "5":	"I grew up fighting, and I refined my talents by defending myself against people who crossed me.",
+        "6":	"I could always pick up just about any weapon and know how to use it effectively."
+    },
+    "monk":{
+        "1":	"I was chosen to study at a secluded monastery. There, I was taught the fundamental techniques required to eventually master a tradition.",
+        "2":	"I sought instruction to gain a deeper understanding of existence and my place in the world.",
+        "3":	"I stumbled into a portal to the Shadowfell and took refuge in a strange monastery, where I learned how to defend myself against the forces of darkness.",
+        "4":	"I was overwhelmed with grief after losing someone close to me, and I sought the advice of philosophers to help me cope with my loss.",
+        "5":	"I could feel that a special sort of power lay within me, so I sought out those who could help me call it forth and master it.",
+        "6":	"I was wild and undisciplined as a youngster, but then I realized the error of my ways. I applied to a monastery and became a monk as a way to live a life of discipline."
+    },
+    "paladin":{
+        "1":	"a fantastical being appeared before me and called on me to undertake a holy quest.",
+        "2":	"one of my ancestors left a holy quest unfulfilled, so I intend to finish that work.",
+        "3":	"the world is a dark and terrible place. I decided to serve as a beacon of light shining out against the gathering shadows.",
+        "4":	"I served as a paladin’s squire, learning all I needed to swear my own sacred oath.",
+        "5":	"evil must be opposed on all fronts. I feel compelled to seek out wickedness and purge it from the world.",
+        "6":	"becoming a paladin was a natural consequence of my unwavering faith. In taking my vows, I became the holy sword of my religion."
+    },
+    "ranger":{
+        "1":	"I found purpose while I honed my hunting skills by bringing down dangerous animals at the edge of civilization.",
+        "2":	"I always had a way with animals, able to calm them with a soothing word and a touch.",
+        "3":	"I suffer from terrible wanderlust, so being a ranger gave me a reason not to remain in one place for too long.",
+        "4":	"I have seen what happens when the monsters come out from the dark. I took it upon myself to become the first line of defense against the evils that lie beyond civilization’s borders.",
+        "5":	"I met a grizzled ranger who taught me woodcraft and the secrets of the wild lands.",
+        "6":	"I served in an army, learning the precepts of my profession while blazing trails and scouting enemy encampments."
+    },
+    "rogue":{
+        "1":	"I’ve always been nimble and quick of wit, so I decided to use those talents to help me make my way in the world.",
+        "2":	"an assassin or a thief wronged me, so I focused my training on mastering the skills of my enemy to better combat foes of that sort.",
+        "3":	"an experienced rogue saw something in me and taught me several useful tricks.",
+        "4":	"I decided to turn my natural lucky streak into the basis of a career, though I still realize that improving my skills is essential.",
+        "5":	"I took up with a group of ruffians who showed me how to get what I want through sneakiness rather than direct confrontation.",
+        "6":	"I’m a sucker for a shiny bauble or a sack of coins, as long as I can get my hands on it without risking life and limb."
+    },
+    "sorcerer":{
+        "1":	"when I was born, all the water in the house froze solid, the milk spoiled, or all the iron turned to copper. My family is convinced that this event was a harbinger of stranger things to come for me.",
+        "2":	"I suffered a terrible emotional or physical strain, which brought forth my latent magical power. I have fought to control it ever since.",
+        "3":	"my immediate family never spoke of my ancestors, and when I asked, they would change the subject. It wasn’t until I started displaying strange talents that the full truth of my heritage came out.",
+        "4":	"when a monster threatened one of my friends, I became filled with anxiety. I lashed out instinctively and blasted the wretched thing with a force that came from within me.",
+        "5":	"sensing something special in me, a stranger taught me how to control my gift.",
+        "6":	"after I escaped from a magical conflagration, I realized that though I was unharmed, I was not unchanged. I began to exhibit unusual abilities that I am just beginning to understand."
+    },
+    "warlock":{
+        "1":	"while wandering around in a forbidden place, I encountered an otherworldly being that offered to enter into a pact with me.",
+        "2":	"I was examining a strange tome I found in an abandoned library when the entity that would become my patron suddenly appeared before me.",
+        "3":	"I stumbled into the clutches of my patron after I accidentally stepped through a magical doorway.",
+        "4":	"when I was faced with a terrible crisis, I prayed to any being who would listen, and the creature that answered became my patron.",
+        "5":	"my future patron visited me in my dreams and offered great power in exchange for my service.",
+        "6":	"one of my ancestors had a pact with my patron, so that entity was determined to bind me to the same agreement."
+    },
+    "wizard":{
+        "1":	"an old wizard chose me from among several candidates to serve an apprenticeship.",
+        "2":	"when I became lost in a forest, a hedge wizard found me, took me in, and taught me the rudiments of magic.",
+        "3":	"I grew up listening to tales of great wizards and knew I wanted to follow their path. I strove to be accepted at an academy of magic and succeeded.",
+        "4":	"one of my relatives was an accomplished wizard who decided I was smart enough to learn the craft.",
+        "5":	"while exploring an old tomb, library, or temple, I found a spellbook. I was immediately driven to learn all I could about becoming a wizard.",
+        "6":	"I was a prodigy who demonstrated mastery of the arcane arts at an early age. When I became old enough to set out on my own, I did so to learn more magic and expand my power."
+    },
+    "numLifeEvents": {
+        "1:20":  1,
+        "21:30":  4,
+        "31:40":  6,
+        "41:50":  8,
+        "51:60":  10,
+        "61:100":  12
+    },
+    "lifeEvents": {
+        "1:10":   {"name": "tragedy", "label": "I suffered a tragedy.", "table": "tragedies", "die": 12 },
+        "11:20":  {"name": "boon", "label": "I gained a bit of good fortune.", "table": "boons", "die": 10 },
+        "21:30":  {"name": "love", "label": "I fell in love or got married."},
+        "31:40":  {"name": "rift", "label": "I made an enemy of an adventurer."},
+        "41:50":  {"name": "friend", "label": "I made a friend of an adventurer."},
+        "51:70":  {"name": "job", "label": "I spent time working in a job related to my background. (Start the game with an extra 2d6 gp.)"},
+        "71:75":  {"name": "vip", "label": "I met someone important."},
+        "76:80":  {"name": "adventure", "label": "I went on an adventure.", "table": "adventure", "die": 100  },
+        "81:85":  {"name": "supernatural", "label": "I had a supernatural experience.", "table": "supernaturalEvents", "die": 100},
+        "86:90":  {"name": "war", "label": "I fought in a battle.", "table": "war", "die": 12},
+        "91:95":  {"name": "crime", "label": "I committed a crime or was wrongly accused of doing so.", "table": "crime", "die": 8},
+        "96:99":  {"name": "arcane", "label": "I encountered something magical.", "table": "arcaneMatters", "die": 10},
+        "100":    {"name": "weird", "label": "Something truly strange happened to me.", "table": "weirdstuff", "die": 12}
+    },
+    "adventure": {
+        "1:10": "I nearly died. I have nasty scars on your body, and I am missing an ear, 1d3 fingers, or 1d4 toes.",
+        "11:20": "I suffered a grievous injury. Although the wound healed, it still pains me from time to time.",
+        "21:30": "I was wounded, but in time I fully recovered.",
+        "31:40": "I contracted a disease while exploring a filthy warren. I recovered from the disease, but I  have a persistent cough, pockmarks on my skin, or prematurely gray hair.",
+        "41:50": "I was poisoned by a trap or a monster. I recovered, but the next time I must make a saving throw against poison, I make the saving throw with disadvantage.",
+        "51:60": "I lost something of sentimental value to me during your adventure. (Remove one trinket from your possessions.)",
+        "61:70": "I was terribly frightened by something I encountered and ran away, abandoning my companions to their fate.",
+        "71:80": "I learned a great deal during your adventure. (The next time I make an ability check or a saving throw, I have advantage on the roll.)",
+        "81:90": "I found some treasure on my adventure. I have 2d6 gp left from my share of it.",
+        "91:99": "I found a considerable amount of treasure on my adventure. I have 1d20 + 50 gp left from my share of it.",
+        "100": "I came across a common magic item (of the DM’s choice)."
+    },
+    "arcaneMatters": {
+        "1": "I was charmed or frightened by a spell.",
+        "2": "I was injured by the effect of a spell.",
+        "3": "I witnessed a powerful spell being cast by a cleric, a druid, a sorcerer, a warlock, or a wizard.",
+        "4": "I drank a potion (of the DM’s choice).",
+        "5": "I found a spell scroll (of the DM’s choice) and succeeded in casting the spell it contained.",
+        "6": "I was affected by teleportation magic.",
+        "7": "I turned invisible for a time.",
+        "8": "I identified an illusion for what it was.",
+        "9": "I saw a creature being conjured by magic.",
+        "10": "My fortune was read by a diviner."
+    },
+    "boons": {
+        "1": "A friendly wizard gave me a spell scroll containing one cantrip (of the DM’s choice).",
+        "2": "I saved the life of a commoner, who now owes me a life debt. (This individual accompanies you on your travels and performs mundane tasks for you, but will leave if neglected, abused, or imperiled. Determine details about this character by working with your DM.)",
+        "3": "I found a riding horse.",
+        "4": "I found some money. (I have 1d20 gp in addition to your regular starting funds.)",
+        "5": "A relative bequeathed me a simple weapon of my choice.",
+        "6": "I found something interesting. (I gain one additional trinket.)",
+        "7": "I once performed a service for a local temple. (The next time you visit the temple, you can receive healing up to your hit point maximum.)",
+        "8": "A friendly alchemist gifted me with a potion of healing or a flask of acid. (Your choice.)",
+        "9": "I found a treasure map.",
+        "10": "A distant relative left me a stipend that enables me to live at the comfortable lifestyle (For 1d20 years. If you choose to live at a higher lifestyle, you reduce the price of the lifestyle by 2 gp during that time period.)"
+    },
+    "crime": {
+        "1": "murder",
+        "2": "theft",
+        "3": "burglary",
+        "4": "assault",
+        "5": "smuggling",
+        "6": "kidnapping",
+        "7": "extortion",
+        "8": "counterfeiting"
+    },
+    "punishment": {
+      "1:3":	"I did not commit the crime and was exonerated after being accused.",
+      "4:6":	"I committed the crime or helped do so, but nonetheless the authorities found me not guilty.",
+      "7:8":	"I was nearly caught in the act. I had to flee and am wanted in the community where the crime occurred.",
+      "9:11":	"I was caught and convicted. I spent time in jail, chained to an oar, or performing hard labor. I served a sentence of 1d4 years.",
+      "12":	"I was caught and convicted. I spent time in jail, but I succeeded in escaping after 1d12 months."
+    },
+    "supernaturalEvents": {
+      "1:5":	"I was ensorcelled by a fey and enslaved for 1d6 years before I escaped.",
+      "6:10":	"I saw a demon and ran away before it could do anything to me.",
+      "11:15":  "A devil tempted me. (Make a DC 10 Wisdom saving throw. On a failed save, your alignment shifts one step toward evil (if it’s not evil already), and you start the game with an additional 1d20 + 50 gp.)",
+      "16:20":	"I woke up one morning miles from my home, with no idea how I got there.",
+      "21:30":	"I visited a holy site and felt the presence of the divine there.",
+      "31:40":	"I witnessed a falling red star, a face appearing in the frost, or some other bizarre happening. I am certain that it was an omen of some sort.",
+      "41:50":	"I escaped certain death and believe it was the intervention of a god that saved me.",
+      "51:60":	"I witnessed a minor miracle.",
+      "61:70":	"I explored an empty house and found it to be haunted.",
+      "71:75":	"I was briefly possessed. Roll a d6 to determine what type of creature possessed you: 1, celestial; 2, devil; 3, demon; 4, fey; 5, elemental; 6, undead.",
+      "76:80":	"I saw a ghost.",
+      "81:85":	"I saw a ghoul feeding on a corpse.",
+      "86:90":  "A celestial or a fiend visited me in my dreams to give a warning of dangers to come.",
+      "91:95":	"I briefly visited the Feywild or the Shadowfell.",
+      "96:00":	"I saw a portal that I believe leads to another plane of existence."
+    },
+    "tragedies": {
+      "1:2":  "A family member or a close friend died. Roll on the Cause of Death supplemental table to find out how.",
+        "3":   "A friendship ended bitterly, and the other person is now hostile to me. The cause might have been a misunderstanding or something I or the former friend did.",
+        "4":   "I lost all my possessions in a disaster, and I had to rebuild my life.",
+        "5":   "I was imprisoned for a crime I didn’t commit and spent 1d6 years at hard labor, in jail, or shackled to an oar in a slave galley.",
+        "6":   "War ravaged my home community, reducing everything to rubble and ruin. In the aftermath, I either helped my town rebuild or moved somewhere else.",
+        "7":   "A lover disappeared without a trace. I have been looking for that person ever since.",
+        "8":   "A terrible blight in my home community caused crops to fail, and many starved. I lost a sibling or some other family member.",
+        "9":   "I did something that brought terrible shame to me in the eyes of my family. I might have been involved in a scandal, dabbled in dark magic, or offended someone important. The attitude of my family members toward me became indifferent at best, though they might eventually forgive me.",
+        "10": 	"For a reason I was never told, I was exiled from my community. I then either wandered in the wilderness for a time or promptly found a new place to live.",
+      "11": 	"A romantic relationship ended. (Roll a d6. An odd number means it ended with bad feelings, while an even number means it ended amicably.)",
+      "12": 	"A current or prospective romantic partner of mine died. Roll on the Cause of Death supplemental table to find out how. If the result is murder, roll a d12. On a 1, I was responsible, whether directly or indirectly."
+    },
+    "war": {
+        "1": "I was knocked out and left for dead. I woke up hours later with no recollection of the battle.",
+        "2:3":	"I was badly injured in the fight, and I still bear the awful scars of those wounds.",
+        "4": "I ran away from the battle to save my life, but I still feel shame for my cowardice.",
+        "5:7":	"I suffered only minor injuries, and the wounds all healed without leaving scars.",
+        "8:9":	"I survived the battle, but I suffer from terrible nightmares in which I relive the experience.",
+        "10:11":	"I escaped the battle unscathed, though many of my friends were injured or lost.",
+        "12":	"I acquitted myself well in battle and are remembered as a hero. I might have received a medal for my bravery."
+    },
+    "weirdStuff": {
+        "1": "I was turned into a toad and remained in that form for 1d4 weeks.",
+        "2": "I was petrified and remained a stone statue for a time until someone freed me.",
+        "3": "I was enslaved by a hag, a satyr, or some other being and lived in that creature’s thrall for 1d6 years.",
+        "4": "A dragon held me as a prisoner for 1d4 months until adventurers killed it.",
+        "5": "I was taken captive by a race of evil humanoids such as drow, kuo-toa, or quaggoths. I lived as a slave in the Underdark until I escaped.",
+        "6": "I served a powerful adventurer as a hireling. I have only recently left that service. (Work with your DM to determine the basic details about your former employer.",
+        "7": "I went insane for 1d6 years and recently regained my sanity. A tic or some other bit of odd behavior might linger.",
+        "8": "A lover of mine was secretly a silver dragon.",
+        "9": "I was captured by a cult and nearly sacrificed on an altar to the foul being the cultists served. I escaped, but I fear they will find me.",
+        "10": "I met a demigod, an archdevil, an archfey, a demon lord, or a titan, and I lived to tell the tale.",
+        "11":	"I was swallowed by a giant fish and spent a month in its gullet before I escaped.",
+        "12": "A powerful being granted me a wish, but I squandered it on something frivolous."
     }
 }
