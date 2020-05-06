@@ -31,7 +31,6 @@ class Backstory extends React.Component {
         this.generateFamily();
         this.generateChildhood();
         this.generateLifeEvents();
-        this.genState("siblings");
         this.genState("background");
         this.genState("class");
     }
@@ -75,9 +74,12 @@ class Backstory extends React.Component {
     }
 
     rerollAll = () => {
+        this.genState("birthplace");
         this.generateFamily();
         this.generateChildhood();
         this.generateLifeEvents();
+        this.genState("background");
+        this.genState("class");
     }
 
     generateFamily() {
