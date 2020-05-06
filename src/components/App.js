@@ -1,6 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import logo from '../logo.svg';
 import '../styles/App.css';
 import Backstory from './Backstory';
@@ -12,7 +17,7 @@ class App extends React.Component {
     this.state = {
       race: {name: "human", label: "Human"},
       class: { name: "barbarian", label: "Barbarian" },
-      background: { name: "acolyte", label: "Acolyte"},
+      background: { name: "acolyte", label: "Acolyte", textLabel: "an Acolyte" },
       subrace: {name: '', label: ''},
       charisma: {"name": "10", "label": "10", "modifier": 0},
       age: 20
@@ -53,10 +58,21 @@ class App extends React.Component {
           
         <Backstory
         race={this.state.race}
-        class={this.state.class.name}
-        background={this.state.background.name}
+        class={this.state.class}
+        background={this.state.background}
         charisma={this.state.charisma}
         age={this.state.age}></Backstory>
+
+        <Navbar fixed="bottom" bg="dark" variant='dark'>
+          <Container>
+            <Row>
+            <Navbar.Brand><a href="https://github.com/LeeMcKusick/origen">View on Github</a></Navbar.Brand>
+            </Row>  
+            <Row>
+            <Navbar.Brand>Made by Lee Skellington-McKusick</Navbar.Brand>
+            </Row>
+          </Container>
+        </Navbar>
       </div>
     );
   }

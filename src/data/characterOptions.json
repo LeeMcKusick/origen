@@ -54,18 +54,18 @@
         {"name": "wizard", "label": "Wizard"}
     ],
     "background": [
-        {"name": "acolyte", "label": "Acolyte"},
-        {"name": "charlatan", "label": "Charlatan"},
-        {"name": "criminal", "label": "Criminal/Spy"},
-        {"name": "entertainer", "label": "Entertainer"},
-        {"name": "folkhero", "label": "Folk Hero"},
-        {"name": "guildartisan", "label": "Guild Artisan/Guild Merchant"},
-        {"name": "noble", "label": "Noble"},
-        {"name": "outlander", "label": "Outlander"},
-        {"name": "sage", "label": "Sage"},
-        {"name": "sailor", "label": "Sailor"},
-        {"name": "soldier", "label": "Soldier"},
-        {"name": "urchin", "label": "Urchin"}
+        {"name": "acolyte", "label": "Acolyte", "textLabel": "an Acolyte"},
+        {"name": "charlatan", "label": "Charlatan", "textLabel": "a Charlatan"},
+        {"name": "criminal", "label": "Criminal/Spy", "textLabel": "a Criminal/Spy"},
+        {"name": "entertainer", "label": "Entertainer", "textLabel": "an Entertainer"},
+        {"name": "folkhero", "label": "Folk Hero", "textLabel": "a Folk Hero"},
+        {"name": "guildartisan", "label": "Guild Artisan/Merchant", "textLabel": "a Guild Artisan/Merchant"},
+        {"name": "noble", "label": "Noble", "textLabel": "a Noble"},
+        {"name": "outlander", "label": "Outlander", "textLabel": "an Outlander"},
+        {"name": "sage", "label": "Sage", "textLabel": "a Sage"},
+        {"name": "sailor", "label": "Sailor", "textLabel": "a Sailor"},
+        {"name": "soldier", "label": "Soldier", "textLabel": "a Soldier"},
+        {"name": "urchin", "label": "Urchin", "textLabel": "an Urchin"}
     ],
     "charisma": [
         {"name": "6", "label": "6", "modifier": -2},

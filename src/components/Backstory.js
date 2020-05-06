@@ -169,7 +169,6 @@ class Backstory extends React.Component {
         
     }
 
-
     generateLifeEvents = () => {
         console.log(this.props.age);
         let lifeAge = this.getResult("numLifeEvents", Number(this.props.age));
@@ -204,8 +203,6 @@ class Backstory extends React.Component {
         })
 
     }
-
-
 
     genState = (field) => {
         switch(field) {
@@ -258,12 +255,12 @@ class Backstory extends React.Component {
                 break;
             case "background":
                 this.setState({
-                    backgroundReason: this.getResult(this.props.background, this.roll(6) )
+                    backgroundReason: this.getResult(this.props.background.name, this.roll(6) )
                 });
                 break;
             case "class":
                 this.setState({
-                    classReason: this.getResult(this.props.class, this.roll(6) )
+                    classReason: this.getResult(this.props.class.name, this.roll(6) )
                 });
                 break;
             default: 
@@ -345,36 +342,50 @@ class Backstory extends React.Component {
             </Row>
             <hr/>
             <Row>
-                <h4>My Family</h4>
+            <Col>
+                <Container><Row>
+                    <h4>My Family</h4>
+                </Row>
+                <Row>
+                    <p>{this.state.parents}</p>
+                </Row>
+                <Row>
+                    <p><span class="siblings">I have {this.state.siblings.length ? this.state.siblings.length : 'no'} {this.state.siblings.length === 1 ? 'sibling' : 'siblings'}</span><span>{sibOut}</span>.</p>
+                </Row></Container>
+                <Container>
+                <Row>
+                    <h4>My Childhood</h4>
+                </Row>
+                <Row>
+                    <p>I was born {this.state.birthplace}.</p>
+                </Row>
+                <Row>
+                    <p>I grew up {this.state.childhoodHome}, in {this.state.lifestyle} conditions.</p>
+                </Row>
+                <Row>
+                    <p>{this.state.childhoodMemories}</p>
+                </Row>
+                </Container>
+            </Col>
+            <Col>
+            <Container>
+                <Row>
+                    <h4>My Life Choices</h4>
+                </Row>
+                <Row>
+                    <p>I became {this.props.background.textLabel} because {this.state.backgroundReason}</p>
+                </Row>
+                <Row>
+                    <p>I became a {this.props.class.label} because {this.state.classReason}</p>
+                </Row>
+                </Container>
+                <Container>
+                <Row>
+                    <h4>My Life Events</h4>
+                </Row>
+                {lifeEvents}
+                </Container></Col>
             </Row>
-            <Row>
-                <p>{this.state.parents}</p>
-            </Row>
-            <Row>
-                <p><span class="siblings">I have {this.state.siblings.length ? this.state.siblings.length : 'no'} {this.state.siblings.length === 1 ? 'sibling' : 'siblings'}</span><span>{sibOut}</span>.</p>
-            </Row>
-            <Row>
-                <h4>My Childhood and Life Choices</h4>
-            </Row>
-            <Row>
-                <p>I was born {this.state.birthplace}.</p>
-            </Row>
-            <Row>
-                <p>I grew up {this.state.childhoodHome}, in {this.state.lifestyle} conditions.</p>
-            </Row>
-            <Row>
-                <p>{this.state.childhoodMemories}</p>
-            </Row>
-            <Row>
-                <p>I became a {this.props.background} because {this.state.backgroundReason}</p>
-            </Row>
-            <Row>
-                <p>I became a {this.props.class} because {this.state.classReason}</p>
-            </Row>
-            <Row>
-                <h4>Life Events</h4>
-            </Row>
-            {lifeEvents}
         </Container>
         );
     }
