@@ -161,7 +161,7 @@
         "4":	"I saw a bard perform once, and I knew from that moment on what I was born to do.",
         "5":	"I earned coin by performing on street corners and eventually made a name for myself.",
         "6":	"a traveling entertainer took me in and taught me the trade."
-      }, 
+    }, 
     "folkhero": {
         "1":	"I learned what was right and wrong from my family.",
         "2":	"I was always enamored by tales of heroes and wished I could be something more than ordinary.",
@@ -169,7 +169,7 @@
         "4":	"a parent or one of my relatives was an adventurer, and I was inspired by that person’s courage.",
         "5":	"a mad old hermit spoke a prophecy when I was born, saying that I would accomplish great things.",
         "6":	"I have always stood up for those who are weaker than I am."
-      },
+    },
     "guildartisan": {
         "1":	"I was apprenticed to a master who taught me the guild’s business.",
         "2":	"I helped a guild artisan keep a secret or complete a task, and in return I was taken on as an apprentice.",

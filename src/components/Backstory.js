@@ -28,15 +28,50 @@ class Backstory extends React.Component {
 
     componentDidMount() {
         this.genState("birthplace");
-        //this.genState("family");
-
         this.generateFamily();
         this.generateChildhood();
         this.generateLifeEvents();
-
-
-        //this.genState("parents");
         this.genState("siblings");
+        this.genState("background");
+        this.genState("class");
+    }
+
+    componentDidUpdate(newProps) {
+        //console.log(newProps);
+        //console.log(this.props);
+        
+        Object.keys(newProps).forEach((prop) => {
+            //console.log(prop);
+            if (newProps[prop] !== this.props[prop] ) {
+                //Move to this later for simplification.
+                /*this.setState({
+                    [prop]: this.props.prop
+                })*/
+
+                switch (prop) {
+                    case "race": 
+                        this.generateFamily();
+                        break;
+                    case "class": 
+                        this.genState("class");
+                        break;
+                    case "age": 
+                        this.generateLifeEvents();
+                        break;
+                    case "charisma": 
+                        this.generateChildhood();
+                        break;
+                    case "background": 
+                        this.genState("background");
+                        break;
+                    default:
+                        return false;
+                }
+
+            }
+        });
+        
+        
     }
 
     rerollAll = () => {
@@ -129,9 +164,9 @@ class Backstory extends React.Component {
             childhoodMemories: memories
         });
 
-        this.genState("background");
-        this.genState("class");
+        
     }
+
 
     generateLifeEvents = () => {
         console.log(this.props.age);
