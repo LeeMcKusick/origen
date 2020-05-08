@@ -83,8 +83,5 @@
         {"name": "18", "label": "18", "modifier": 4},
         {"name": "19", "label": "19", "modifier": 4},
         {"name": "20", "label": "20", "modifier": 5}
-    ],
-    "age": {
-        
-    }
+    ]
 }

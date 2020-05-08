@@ -6,10 +6,11 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import logo from '../logo.svg';
-import '../styles/App.css';
 import Backstory from './Backstory';
 import CharacterForm from './CharacterForm.js';
+
+import logo from '../logo.svg';
+import '../styles/App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -47,6 +48,8 @@ class App extends React.Component {
             </form>
           </div>
         </header>
+
+
         <CharacterForm 
           race={this.state.race}
           class={this.state.class}
@@ -57,19 +60,19 @@ class App extends React.Component {
           callback={this.charFormCallback}></CharacterForm>
           
         <Backstory
-        race={this.state.race}
-        class={this.state.class}
-        background={this.state.background}
-        charisma={this.state.charisma}
-        age={this.state.age}></Backstory>
+          race={this.state.race}
+          class={this.state.class}
+          background={this.state.background}
+          charisma={this.state.charisma}
+          age={this.state.age}></Backstory>
 
         <Navbar fixed="bottom" bg="dark" variant='dark'>
           <Container>
             <Row>
-            <Navbar.Brand><a href="https://github.com/LeeMcKusick/origen">View on Github</a></Navbar.Brand>
+              <Navbar.Brand><a href="https://github.com/LeeMcKusick/origen">View on Github</a></Navbar.Brand>
             </Row>  
             <Row>
-            <Navbar.Brand>Made by Lee Skellington-McKusick</Navbar.Brand>
+              <Navbar.Brand>Made by Lee Skellington-McKusick</Navbar.Brand>
             </Row>
           </Container>
         </Navbar>

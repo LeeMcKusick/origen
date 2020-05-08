@@ -1,4 +1,5 @@
 import React from 'react';
+import Rollable from './Rollable';
 
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -9,7 +10,8 @@ import originOptions from '../data/originTables.json';
 //import raceOptions from '../data/originOptions.json';
 
 
-class Backstory extends React.Component {
+class Backstory extends Rollable {
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -35,13 +37,9 @@ class Backstory extends React.Component {
         this.genState("class");
     }
 
-    componentDidUpdate(newProps) {
-        //console.log(newProps);
-        //console.log(this.props);
-        
-        Object.keys(newProps).forEach((prop) => {
-            //console.log(prop);
-            if (newProps[prop] !== this.props[prop] ) {
+    componentDidUpdate(props) {        
+        Object.keys(props).forEach((prop) => {
+            if (props[prop] !== this.props[prop] ) {
                 //Move to this later for simplification.
                 /*this.setState({
                     [prop]: this.props.prop
@@ -66,7 +64,6 @@ class Backstory extends React.Component {
                     default:
                         return false;
                 }
-
             }
         });
         
@@ -83,7 +80,7 @@ class Backstory extends React.Component {
     }
 
     generateFamily() {
-        let familyRoll = this.getResult("raised", this.roll(100));
+        let familyRoll = this.rollOnTable('raised');
         let motherStatus = '';
         let fatherStatus = '';
 
@@ -96,7 +93,7 @@ class Backstory extends React.Component {
         let racesWithParentOptions = ["half-elf", "half-orc", "tiefling"];
         let parentRace = "";
         if (racesWithParentOptions.includes(this.props.race.name)) {
-            parentRace = " " + this.getResult(this.props.race.name, this.roll(8));
+            parentRace = " " + this.rollOnTable(this.props.race.name);
         }
 
 
@@ -106,7 +103,7 @@ class Backstory extends React.Component {
                 //console.log(motherStatusRoll);
                 motherStatus = "My mother " + this.getResult("absentParent", motherStatusRoll);
                 if (motherStatusRoll < 5) {
-                    motherStatus = motherStatus + " She " + this.getResult("causeOfDeath", this.roll(20));
+                    motherStatus = motherStatus + " She " + this.rollOnTable("causeOfDeath");
                 }
                 //console.log(motherStatus);
             } else {
@@ -122,7 +119,7 @@ class Backstory extends React.Component {
                 console.log(fatherStatusRoll);
                 fatherStatus = "My father " + this.getResult("absentParent", fatherStatusRoll);
                 if (fatherStatusRoll < 5) {
-                    fatherStatus = fatherStatus + " He " + this.getResult("causeOfDeath", this.roll(20));
+                    fatherStatus = fatherStatus + " He " + this.rollOnTable("causeOfDeath");
                 }
                 //console.log(motherStatus);
             } else {
@@ -178,21 +175,21 @@ class Backstory extends React.Component {
         let lifeEvents = [];
         
         for (let i=0; i < numLifeEvents; i++) {
-            let event = this.getResult('lifeEvents', this.roll(100));
+            let event = this.rollOnTable('lifeEvents');
             console.log(event);
             let eventText = "";
             
             if (event.name === "crime") {
                 eventText += "I was accused of " + this.getResult(event.table, this.roll(event.die)) + ". ";
-                eventText += this.getResult("punishment", this.roll(12));;
+                eventText += this.rollOnTable("punishment");
             } else if (event.name === "supernatural") {
                 let snRoll = this.roll(event.die);
                 eventText += event.label + " " + this.getResult(event.table, snRoll);
                 if (snRoll > 70 && snRoll < 76) {
-                    eventText += this.getResult("possession", this.roll(6));
+                    eventText += this.rollOnTable("possession");
                 }
             } else if (event.table) {
-                eventText += this.getResult(event.table, this.roll(event.die));
+                eventText += event.label + " " + this.rollOnTable(event.table);
             } else {
                 eventText += event.label;
             }
@@ -215,7 +212,7 @@ class Backstory extends React.Component {
                 if (parentRoll > 1 ) { 
                     
                     if (racesWithParentOptions.includes(this.props.race)) { 
-                        parentRace = this.getResult(this.props.race, this.roll(8))
+                        parentRace = this.rollOnTable(this.props.race)
                     }
                 }
                 this.setState({
@@ -225,7 +222,7 @@ class Backstory extends React.Component {
                 break;
             case "birthplace":
                 this.setState(
-                    {birthplace: this.getResult("birthplace", this.roll(100)) }
+                    {birthplace: this.rollOnTable("birthplace") }
                 );
                 break;
             case "siblings":
@@ -255,50 +252,16 @@ class Backstory extends React.Component {
                 break;
             case "background":
                 this.setState({
-                    backgroundReason: this.getResult(this.props.background.name, this.roll(6) )
+                    backgroundReason: this.rollOnTable(this.props.background.name)
                 });
                 break;
             case "class":
                 this.setState({
-                    classReason: this.getResult(this.props.class.name, this.roll(6) )
+                    classReason: this.rollOnTable(this.props.class.name)
                 });
                 break;
             default: 
                 return false;
-        }
-    }
-    
-    roll = (max) => {
-        return Math.floor(Math.random() * max + 1);
-    };
-
-    rollMulti = (die, num) => {
-        let total = 0;
-        for( let i=0; i < num; i++) {
-            total += Math.floor(Math.random() * die + 1);
-            //console.log(total);
-        }
-        return total;
-    }
-
-    getResult = (table, roll) => {
-        //console.log(originOptions[]);
-        //console.log(roll);
-        let res = originOptions[table][roll];
-        if (res) {
-            return res;
-        } else {
-            let val;
-            //let opts;
-            Object.keys(originOptions[table]).forEach(function(key) {
-                let splitKey = key.split(":");
-                if(splitKey[1]) {
-                    if(splitKey[0] <= roll && roll <= splitKey[1]) {
-                        val = originOptions[table][key];
-                    }
-                }
-            })
-            return val;
         }
     }
 
@@ -310,8 +273,8 @@ class Backstory extends React.Component {
         for(let i=0; i < numSibs; i++) {
             siblings.push({
                 num: i,
-                order: this.getResult( "birthOrder", this.roll(20) ),
-                gender: this.getResult("siblingGender", this.roll(2) )
+                order: this.rollOnTable( "birthOrder"),
+                gender: this.rollOnTable("siblingGender")
             });
         }
         return siblings;
@@ -322,28 +285,23 @@ class Backstory extends React.Component {
                 <span class="sib" key={sib.num}> {sib.order} {sib.gender}</span>
         );
 
-        
-        let lifeEvents = this.state.lifeEvents.map((lifeEvent) => 
-            <Row className="lifeEvent">{lifeEvent}</Row>
-        );
-        
-
-
         /* Replace sibout with a separate component */
         return (
+
 
         <Container>
             <hr/>
             <Row>
-                <Col><Button onClick={() => this.generateFamily()}>Reroll Family</Button></Col>
-                <Col><Button onClick={() => this.generateChildhood()}>Reroll Childhood</Button></Col>
-                <Col><Button onClick={() => this.generateLifeEvents()}>Reroll Life Events</Button></Col>
-                <Col><Button onClick={() => this.rerollAll()}>Reroll All</Button></Col>
+                <Col className="center"><Button onClick={() => this.generateFamily()}>Reroll Family</Button></Col>
+                <Col className="center"><Button onClick={() => this.generateChildhood()}>Reroll Childhood</Button></Col>
+                <Col className="center"><Button onClick={() => this.generateLifeEvents()}>Reroll Life Events</Button></Col>
+                <Col className="center"><Button onClick={() => this.rerollAll()}>Reroll All</Button></Col>
             </Row>
             <hr/>
             <Row>
             <Col>
-                <Container><Row>
+            <Container>
+                <Row>
                     <h4>My Family</h4>
                 </Row>
                 <Row>
@@ -383,7 +341,12 @@ class Backstory extends React.Component {
                 <Row>
                     <h4>My Life Events</h4>
                 </Row>
-                {lifeEvents}
+                {
+                    this.state.lifeEvents.map((lifeEvent) => (
+                        <Row className="lifeEvent">{lifeEvent}</Row>
+                    ))
+                }
+                
                 </Container></Col>
             </Row>
         </Container>

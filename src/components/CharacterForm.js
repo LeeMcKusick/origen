@@ -41,7 +41,7 @@ class CharForm extends React.Component {
     };
 
     handleAge = (event) => {
-        const age = event.currentTarget.value;
+        let age = event.currentTarget.value;
         if (age < 0) { age = 0 }
         if (age > 100) { age = 100 }
         this.setState({
@@ -63,8 +63,6 @@ class CharForm extends React.Component {
     }
 
     render() {
-        let isSubraces = this.state.race.subraces;
-
         return (
         <Container>
             <Form>
@@ -76,7 +74,7 @@ class CharForm extends React.Component {
                         <Form.Control as="select"  name="race" onChange={this.handleInputChange}>
                             {this.getCharOptions("race")}
                          </Form.Control>
-                         {isSubraces &&                           
+                         {this.state.race.subraces &&                           
                             <Form.Control as="select"  name="subrace" onChange={this.handleSubraceChange}>
                                 {this.getSubraces()}
                             </Form.Control>

@@ -339,19 +339,25 @@
         "61:100": 12
     },
     "lifeEvents": {
-        "1:10":   {"name": "tragedy", "label": "I suffered a tragedy.", "table": "tragedies", "die": 12 },
-        "11:20":  {"name": "boon", "label": "I gained a bit of good fortune.", "table": "boons", "die": 10 },
-        "21:30":  {"name": "love", "label": "I fell in love or got married."},
+        "1:10":   {"name": "tragedy", "label": "I suffered a tragedy.", "table": "tragedies"},
+        "11:20":  {"name": "boon", "label": "I gained a bit of good fortune.", "table": "boons"},
+        "21:30":  {"name": "love", "label": "I fell in love.", "table": "love"},
         "31:40":  {"name": "rift", "label": "I made an enemy of an adventurer."},
         "41:50":  {"name": "friend", "label": "I made a friend of an adventurer."},
         "51:70":  {"name": "job", "label": "I spent time working in a job related to my background. (Start the game with an extra 2d6 gp.)"},
         "71:75":  {"name": "vip", "label": "I met someone important."},
-        "76:80":  {"name": "adventure", "label": "I went on an adventure.", "table": "adventure", "die": 100  },
-        "81:85":  {"name": "supernatural", "label": "I had a supernatural experience.", "table": "supernaturalEvents", "die": 100},
+        "76:80":  {"name": "adventure", "label": "I went on an adventure.", "table": "adventure"},
+        "81:85":  {"name": "supernatural", "label": "I had a supernatural experience.", "table": "supernaturalEvents"},
         "86:90":  {"name": "war", "label": "I fought in a battle.", "table": "war", "die": 12},
-        "91:95":  {"name": "crime", "label": "I committed a crime or was wrongly accused of doing so.", "table": "crime", "die": 8},
-        "96:99":  {"name": "arcane", "label": "I encountered something magical.", "table": "arcaneMatters", "die": 10},
-        "100":    {"name": "weird", "label": "Something truly strange happened to me.", "table": "weirdStuff", "die": 12}
+        "91:95":  {"name": "crime", "label": "I committed a crime or was wrongly accused of doing so.", "table": "crime"},
+        "96:99":  {"name": "arcane", "label": "I encountered something magical.", "table": "arcaneMatters"},
+        "100":    {"name": "weird", "label": "Something truly strange happened to me.", "table": "weirdStuff"}
+    },
+    "love": {
+        "1": "We got married, but my spouse died of illness.",
+        "2": "We had a short tryst, but I haven't seen them since.",
+        "3": "We got married, but they left without a word.",
+        "4": "We went on an adventure together, but they were killed by goblins."
     },
     "adventure": {
         "1:10": "I nearly died. I have nasty scars on your body, and I am missing an ear, 1d3 fingers, or 1d4 toes.",
@@ -422,7 +428,7 @@
       "81:85":	"I saw a ghoul feeding on a corpse.",
       "86:90":  "A celestial or a fiend visited me in my dreams to give a warning of dangers to come.",
       "91:95":	"I briefly visited the Feywild or the Shadowfell.",
-      "96:00":	"I saw a portal that I believe leads to another plane of existence."
+      "96:100":	"I saw a portal that I believe leads to another plane of existence."
     },
     "possession": {
         "1": "a celestial.",
@@ -442,7 +448,7 @@
         "8":   "A terrible blight in my home community caused crops to fail, and many starved. I lost a sibling or some other family member.",
         "9":   "I did something that brought terrible shame to me in the eyes of my family. I might have been involved in a scandal, dabbled in dark magic, or offended someone important. The attitude of my family members toward me became indifferent at best, though they might eventually forgive me.",
         "10": 	"For a reason I was never told, I was exiled from my community. I then either wandered in the wilderness for a time or promptly found a new place to live.",
-      "11": 	"A romantic relationship ended. (Roll a d6. An odd number means it ended with bad feelings, while an even number means it ended amicably.)",
+      "11": 	"A romantic relationship ended, with many hurt feelings and resentment.",
       "12": 	"A current or prospective romantic partner of mine died. Roll on the Cause of Death supplemental table to find out how. If the result is murder, roll a d12. On a 1, I was responsible, whether directly or indirectly."
     },
     "war": {
@@ -467,5 +473,8 @@
         "10": "I met a demigod, an archdevil, an archfey, a demon lord, or a titan, and I lived to tell the tale.",
         "11":	"I was swallowed by a giant fish and spent a month in its gullet before I escaped.",
         "12": "A powerful being granted me a wish, but I squandered it on something frivolous."
+    },
+    "fatefulMoments": {
+        "1": "test"
     }
 }
